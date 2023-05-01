@@ -66,6 +66,12 @@
       <plugin>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-maven-plugin</artifactId>
+        <configuration>
+          <image>
+            <builder>dashaun/builder:tiny</builder>
+            <name>dashaun/io.springkubed.service.discovery:v${project.version}-${os.detected.arch}</name>
+          </image>
+        </configuration>
       </plugin>
     </plugins>
   </build>
